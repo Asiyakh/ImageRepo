@@ -4,11 +4,11 @@
 
 .app{
   background-color: #fafafa;
-  height: 100vh;
 }
 .app__header {
-  background-color:#fafafa;
-  padding: 20px;
+  height: 150px;
+  background-color:#eff7ef;
+  padding: 10px;
   object-fit: contain;
   border-bottom: 1px solid lightgray;
 }
