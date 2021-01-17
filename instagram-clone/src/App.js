@@ -6,6 +6,7 @@ import { makeStyles } from '@material-ui/core/styles';
 import Modal from '@material-ui/core/Modal';
 import Button from '@material-ui/core/Button';
 import Input from '@material-ui/core/Input';
+import ImageUpload from './ImageUpload';
 
 function getModalStyle() {
   const top = 50;
@@ -90,6 +91,13 @@ function App() {
 
   return (
     <div className="app">
+      {user?.displayName ? (
+        <ImageUpload username={user.displayName}/>
+      ) : (
+        <h3>Sorry, Login to Upload</h3>
+      )}
+
+
         <Modal 
          open={open}
          onClose={() => setOpen(false)}
@@ -178,7 +186,7 @@ function App() {
 
       {
         posts.map(({id, post}) => (
-          <Post username={post.username} caption={post.caption} imageURL={post.imageURL}/>
+          <Post key={id} username={post.username} caption={post.caption} imageUrl={post.imageUrl}/>
         ))
       }
 
