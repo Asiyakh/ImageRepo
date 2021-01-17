@@ -39,7 +39,7 @@ Ofcourse, running in to issues here and there I used StackOverflow.
 For styling I consulted: https://www.youtube.com/watch?v=j5P9FHiBVNo
 
 
-## To run git repository
+## To run local host
  After cloning and/or pulling and installing NodeJs. Change directory to instagram-clone, and then run the following in your terminal tp install Material-Ui:
  ```
  npm install @material-ui/core
