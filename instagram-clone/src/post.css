@@ -1,9 +1,10 @@
 .post {
     max-width: 500px;
-    max-height: 500px;
     background-color: white;
     border: 1px solid lightgray;
     margin-bottom: 45px;
+    margin-left: auto;
+    margin-right: auto;
 }
 
 .post__Image {
@@ -26,4 +27,30 @@
 
 .post__Avatar{
     margin-right: 10px;
+}
+
+.post__commentBox{
+    display:flex;
+    margin-top: 10px;
+    border: none;
+    border-top: 1px solid lightgray;
+}
+
+.post__Comments {
+    padding:20px;
+}
+
+.post__Input {
+    flex:1;
+    border: none;
+    padding: 10px;
+    border-top: 1px solid lightgray;
+}
+
+.post__Button {
+    flex:0;
+    color:olivedrab; 
+    background-color: transparent;
+    border: None;
+    border-top: 1px solid lightgray
 }

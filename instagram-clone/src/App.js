@@ -61,7 +61,7 @@ function App() {
   }, [user, username]);
 
   useEffect (() => {
-    db.collection('posts').onSnapshot(snapshot => {
+    db.collection('posts').orderBy('timestamp', 'desc').onSnapshot(snapshot => {
       setPosts(snapshot.docs.map(doc => ({
         id: doc.id, 
         post : doc.data()
@@ -91,11 +91,6 @@ function App() {
 
   return (
     <div className="app">
-      {user?.displayName ? (
-        <ImageUpload username={user.displayName}/>
-      ) : (
-        <h3>Sorry, Login to Upload</h3>
-      )}
 
 
         <Modal 
@@ -171,25 +166,29 @@ function App() {
           src="https://www.freelogodesign.org/file/app/client/thumb/c349777f-fae7-4030-9264-ef0a8c8430ef_200x200.png?1610773651534"
           alt=""
         />
-      
-      </div>
-      {user ? (
+        {user ? (
         <Button onClick={() => auth.signOut()}>Sign Out</Button>
-      ) : (
-        <div className="app__LoginContaier">
-           <Button onClick={() => setOpenSignIn(true)}>Sign In</Button>
+          ) : (
+        <div className="app__LoginContainer">
+          <Button onClick={() => setOpenSignIn(true)}>Sign In</Button>
           <Button onClick={() => setOpen(true)}>Sign Up</Button>
         </div>
+        )}
+      </div>
+      
+      <div className="app__Posts">
+        {
+          posts.map(({id, post}) => (
+            <Post key={id} postId={id} user={user} username={post.username} caption={post.caption} imageUrl={post.imageUrl}/>
+          ))
+        }
+      </div>
+
+      {user?.displayName ? (
+        <ImageUpload username={user.displayName}/>
+      ) : (
+        <h3>Sorry! Login to Upload</h3>
       )}
-
-      <h1>Welcome to Snapify</h1>
-
-      {
-        posts.map(({id, post}) => (
-          <Post key={id} username={post.username} caption={post.caption} imageUrl={post.imageUrl}/>
-        ))
-      }
-
       
     </div>
   );
