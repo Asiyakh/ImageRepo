@@ -40,7 +40,16 @@ For styling I consulted: https://www.youtube.com/watch?v=j5P9FHiBVNo
 
 
 ## To run git repository
- After cloning and/or pulling. Run the following in your terminal:
+ After cloning and/or pulling and installing NodeJs. Change directory to instagram-clone, and then run the following in your terminal tp install Material-Ui:
  ```
- cd .
+ npm install @material-ui/core
  ```
+ In order to deploy to a local host, run:
+ ```
+ npm install react-scripts
+ ```
+ Finally, run
+ ```
+ npm start
+ ```
+ and enjoy!
