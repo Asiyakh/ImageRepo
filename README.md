@@ -14,7 +14,7 @@ https://the-image-repo.web.app
 
     1. Open above link.
     2. Sign up using the sign up button in the header. Fill in the form. Now you're able to upload and comment!
-    3. Scroll to the bottom, laughing at the memes I uploaded as you do (feel free to comment), and find the upload form at the bottom.
+    3. Scroll to the bottom, laughing at the memes I uploaded as you scroll (feel free to comment), and find the upload form at the bottom.
     4. Here, you can pick an image from your local device, add a caption, and upload it to our page.
     5. You have successfully uploaded an image.
 
