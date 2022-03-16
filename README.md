@@ -1,4 +1,4 @@
-# ShopifyImageRepo
+# ImageRepo
 
 This website has already been deployed! woo hoo!! No need for any of those pesky "npm run" statements, because I already did it for you. 
 
